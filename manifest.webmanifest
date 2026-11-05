@@ -1,0 +1,23 @@
+{
+  "name": "Sổ Cổ Phiếu",
+  "short_name": "Sổ Cổ Phiếu",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#16233a",
+  "theme_color": "#16233a",
+  "icons": [
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

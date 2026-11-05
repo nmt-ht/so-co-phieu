@@ -1,0 +1,30 @@
+<header>
+  <div class="wrap brand-row">
+    <h1 class="brand">Sổ Cổ Phiếu</h1>
+    <div class="status"><span id="status" aria-live="polite"></span><button id="refresh" class="text-btn" type="button" data-act="refresh" hidden>Làm mới</button></div>
+  </div>
+</header>
+<div class="controls" id="controls-wrap">
+  <div class="wrap control-row" id="controls"></div>
+</div>
+<div class="wrap notice-wrap"><div id="notice" class="notice" hidden></div></div>
+<main>
+  <div class="wrap" id="view"></div>
+  <p class="wrap foot">Công cụ thống kê, không phải khuyến nghị đầu tư.</p>
+</main>
+<nav class="nav" aria-label="Các màn hình">
+  <div class="nav-brand" aria-hidden="true">Sổ Cổ Phiếu</div>
+  <div class="nav-list">
+    <button id="tab-thi-truong" type="button" data-act="tab:thi-truong"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-6 4 3 6-8 3 3"/><path d="M3 21h18"/></svg><span>Thị trường</span></button>
+    <button id="tab-ma" type="button" data-act="tab:ma"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v4M7 15v6M17 3v8M17 17v4"/><rect x="4.500" y="7" width="5" height="8" rx="1"/><rect x="14.500" y="11" width="5" height="6" rx="1"/></svg><span>Cổ phiếu</span></button>
+    <button id="tab-bang" type="button" data-act="tab:bang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h11M4 18h6"/></svg><span>Xếp hạng</span></button>
+    <button id="tab-tin-cay" type="button" data-act="tab:tin-cay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Độ tin cậy</span></button>
+  </div>
+</nav>
+<dialog id="help" class="sheet" aria-labelledby="help-title">
+  <div class="sheet-head">
+    <h2 id="help-title" tabindex="-1"></h2>
+    <button class="sheet-close" type="button" data-act="help-close" aria-label="Đóng giải thích"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="sheet-body" id="help-body"></div>
+</dialog>

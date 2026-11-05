@@ -1,0 +1,103 @@
+/* Hallmark · macrostructure: Workbench, dạng hỏi đáp · tone: thân thiện, chuyên nghiệp · anchor hue: xanh dương 258
+ * pre-emit critique: P4 H5 E4 S5 R4 V3 · slop-test: kiểm theo SKILL.md, thiếu references/slop-test.md
+ * nav: tab đáy trên điện thoại, thanh trái trên máy tính · footer: một dòng · enrichment: none
+ * theme: giữ thương hiệu (bảng giá mực xanh, Bitter + Be Vietnam Pro)
+ * màu giá theo quy ước Việt Nam: xanh tăng, đỏ giảm, vàng tham chiếu, tím trần, lam sàn. */
+:root {
+  --color-paper: oklch(97% 0.006 250);
+  --color-surface: oklch(100% 0 0);
+  --color-surface-2: oklch(95.8% 0.008 250);
+  --color-ink: oklch(25% 0.03 258);
+  --color-ink-2: oklch(41% 0.028 258);
+  --color-muted: oklch(50% 0.022 258);
+  --color-line: oklch(90.5% 0.012 250);
+  --color-grid: oklch(94% 0.009 250);
+  --color-accent: oklch(48% 0.15 258);
+  --color-accent-ink: oklch(99% 0.005 258);
+  --color-accent-soft: oklch(94.5% 0.028 258);
+  --color-up: oklch(46% 0.12 155);
+  --color-down: oklch(51% 0.18 28);
+  --color-ref: oklch(50% 0.1 85);
+  --color-up-soft: oklch(94.5% 0.035 155);
+  --color-down-soft: oklch(94.5% 0.028 28);
+  --color-ref-soft: oklch(95% 0.045 90);
+  --color-band-80: oklch(48% 0.15 258 / 0.14);
+  --color-band-50: oklch(48% 0.15 258 / 0.3);
+  --color-s1: #0f62c9;
+  --color-s2: #c2610c;
+  --color-s3: #a32a8f;
+  --color-board: oklch(27% 0.055 258);
+  --color-board-ink: oklch(97% 0.008 250);
+  --color-board-muted: oklch(84% 0.03 250);
+  --color-board-line: oklch(41% 0.055 258);
+  --color-board-tint: oklch(100% 0 0 / 0.08);
+  --color-board-up: oklch(84% 0.15 155);
+  --color-board-down: oklch(78% 0.14 25);
+  --color-board-ref: oklch(87% 0.14 95);
+  --color-board-ceil: oklch(81% 0.13 310);
+  --color-board-floor: oklch(84% 0.1 215);
+  --color-shadow: oklch(20% 0.03 258 / 0.14);
+  --color-backdrop: oklch(18% 0.03 258 / 0.5);
+  --font-display: "Bitter", Georgia, "Times New Roman", serif;
+  --font-body: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem; --text-2xl: 1.75rem; --text-3xl: 2.25rem;
+  --space-xs: 4px; --space-sm: 8px; --space-md: 12px; --space-lg: 16px; --space-xl: 24px; --space-2xl: 32px;
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-pill: 999px;
+  --tap: 44px; --nav-h: 60px; --rail-w: 216px;
+  --dur-fast: 120ms; --dur-med: 220ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --color-paper: oklch(17.5% 0.016 258);
+  --color-surface: oklch(22% 0.02 258);
+  --color-surface-2: oklch(26.5% 0.022 258);
+  --color-ink: oklch(95.5% 0.008 250);
+  --color-ink-2: oklch(85% 0.014 250);
+  --color-muted: oklch(74% 0.02 250);
+  --color-line: oklch(32% 0.024 258);
+  --color-grid: oklch(27.5% 0.022 258);
+  --color-accent: oklch(79% 0.11 258);
+  --color-accent-ink: oklch(20% 0.04 258);
+  --color-accent-soft: oklch(30% 0.05 258);
+  --color-up: oklch(76% 0.14 155);
+  --color-down: oklch(74% 0.15 28);
+  --color-ref: oklch(82% 0.13 90);
+  --color-up-soft: oklch(30% 0.05 155);
+  --color-down-soft: oklch(30% 0.055 28);
+  --color-ref-soft: oklch(31% 0.05 90);
+  --color-band-80: oklch(79% 0.11 258 / 0.16);
+  --color-band-50: oklch(79% 0.11 258 / 0.34);
+  --color-s1: #4a8fe0;
+  --color-s2: #c98420;
+  --color-s3: #c85fb5;
+  --color-board: oklch(29% 0.06 258);
+  --color-board-line: oklch(43% 0.06 258);
+  color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --color-paper: oklch(17.5% 0.016 258);
+  --color-surface: oklch(22% 0.02 258);
+  --color-surface-2: oklch(26.5% 0.022 258);
+  --color-ink: oklch(95.5% 0.008 250);
+  --color-ink-2: oklch(85% 0.014 250);
+  --color-muted: oklch(74% 0.02 250);
+  --color-line: oklch(32% 0.024 258);
+  --color-grid: oklch(27.5% 0.022 258);
+  --color-accent: oklch(79% 0.11 258);
+  --color-accent-ink: oklch(20% 0.04 258);
+  --color-accent-soft: oklch(30% 0.05 258);
+  --color-up: oklch(76% 0.14 155);
+  --color-down: oklch(74% 0.15 28);
+  --color-ref: oklch(82% 0.13 90);
+  --color-up-soft: oklch(30% 0.05 155);
+  --color-down-soft: oklch(30% 0.055 28);
+  --color-ref-soft: oklch(31% 0.05 90);
+  --color-band-80: oklch(79% 0.11 258 / 0.16);
+  --color-band-50: oklch(79% 0.11 258 / 0.34);
+  --color-s1: #4a8fe0;
+  --color-s2: #c98420;
+  --color-s3: #c85fb5;
+  --color-board: oklch(29% 0.06 258);
+  --color-board-line: oklch(43% 0.06 258);
+  color-scheme: dark;
+}
