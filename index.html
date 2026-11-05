@@ -975,13 +975,14 @@ details.more.card > .more-body { padding-top: var(--space-md); }
     const overlap = bars.filter((b) => onOld.has(b[0]) && b[0] < lastD).at(-1);
     if (overlap && Math.abs(overlap[4] / onOld.get(overlap[0]) - 1) > 0.005) {
       const all = await getBars(sym, Math.floor(Date.now() / 1000 - FIVE_YEARS));
-      if (all.length) { mergeRows(sym, all, true); fresh[sym] = { rows: all, full: true }; }
+      if (all.length) { mergeRows(sym, all, true); fresh[sym] = { rows: closedOnly(sym, all), full: true }; }
       return;
     }
     mergeRows(sym, bars, false);
     const prev = fresh[sym] && fresh[sym].full ? fresh[sym].rows : (fresh[sym] && fresh[sym].rows) || [];
     const merged = prev.filter((r) => r[0] < bars[0][0]).concat(bars);
-    fresh[sym] = { rows: merged, full: !!(fresh[sym] && fresh[sym].full) };
+    // Chỉ lưu phiên đã đóng cửa, để lần mở sau không xem giá tạm là giá đóng cửa khi mất mạng.
+    fresh[sym] = { rows: closedOnly(sym, merged), full: !!(fresh[sym] && fresh[sym].full) };
   }
 
   async function refreshAll() {
